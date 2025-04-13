@@ -1,0 +1,38 @@
+/* _typography.scss */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+body {
+    font-family: 'lato', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  h1, h2, h3 {
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  
+  p {
+    margin-bottom: 1rem;
+  }
+
+  .heading-primary{
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 5rem;
+
+    &--main{
+        display: block;
+        font-weight: 400;
+        font-size: 6.5rem;
+        letter-spacing: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    &--sub{
+        display: block;
+        font-weight: 600;
+        letter-spacing: 1.50rem;
+        font-size: 2rem;
+    }
+  }
