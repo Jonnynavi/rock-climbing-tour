@@ -1,4 +1,6 @@
 /* _typography.scss */
+@use '../abstracts/animations' as *;
+
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 body {
     font-family: 'lato', sans-serif;
@@ -18,21 +20,24 @@ body {
 
   .heading-primary{
     color: white;
-    text-transform: capitalize;
-    margin-bottom: 5rem;
+    text-transform:uppercase;
+    margin-bottom: 7rem;
 
     &--main{
         display: block;
         font-weight: 400;
         font-size: 6.5rem;
-        letter-spacing: 2rem;
-        margin-bottom: 1rem;
+        letter-spacing: 3rem;
+        margin-bottom: 3rem;
+        animation: moveInLeft 1s ease-in-out; 
     }
 
     &--sub{
         display: block;
         font-weight: 600;
-        letter-spacing: 1.50rem;
+        letter-spacing: 1.68rem;
         font-size: 2rem;
+        animation: moveInRight 1s ease-in-out; 
+
     }
   }

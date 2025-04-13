@@ -1,17 +1,61 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/animations' as *;
 
 .btn{
+    &,
     &:link,
     &:visited{
         color: $color-dark-charcoal;
         font-size: 1.6rem;
         text-transform: uppercase;
+        border-radius: 10rem;
+        transition: all .2s;
+        display: inline-block;
+        padding: 2.2rem 4rem;
+        position: relative;
+    }
+
+    &:hover{
+        transform: translateY(-.3rem);
+        box-shadow: 0 1rem 1rem rgba(black, .3);
+
+        &::after{
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+
+    }
+
+    &:active, &:focus{
+        transform: translateY(-.1rem);
+        box-shadow: 0 .5rem 1rem rgba(black, .3);
+    }
+
+    &::after{
+        content: '';
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        position:absolute;
+        border-radius: 10rem;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .2s;
+        
     }
 
     &--white{
-        background-color: white;
-        padding: 1.7rem 4rem;
-        border-radius: 80px;
+        background-color: $color-off-white;
+
+        &::after{
+            background-color: $color-off-white;
+        }
+    }
+
+    &--animated{
+        animation: moveInBottom 1s ease-in-out;
+        animation-fill-mode: forwards;
     }
     
 }

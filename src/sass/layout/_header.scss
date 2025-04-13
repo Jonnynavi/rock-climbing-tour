@@ -4,12 +4,13 @@
     height: 95vh;
     background-image: linear-gradient(to right bottom, rgba($color-vibrant-orange, .6), rgba($color-light-orange, .8)), url(./images/header.jpg);
     background-size: cover;
+    background-position: 50%;
     clip-path: polygon(0% 0%, 0% 100%, 100% 83%, 100% 0%);
     text-align: center;
     position: relative;
 
     &__textbox{
-        position: absolute;
+        position: fixed;
         top:40%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -18,7 +19,7 @@
 
     &__logo-box{
         position: absolute;
-        width: 9rem;
+        width: 11rem;
         top: 1rem;
         left: 1rem;
     }

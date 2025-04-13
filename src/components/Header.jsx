@@ -1,3 +1,5 @@
+import Button from  './Button';
+
 function Header(){
     return(
         <header className="header">
@@ -6,12 +8,11 @@ function Header(){
             </div>
             <div className="header__textbox">
                 <h1 className="heading-primary">
-                    <span className="heading-primary--main">We Answer</span>
-                    <span className="heading-primary--sub">Where the wild calls</span>
+                    <span className="heading-primary--main">Elevate</span>
+                    <span className="heading-primary--sub"> your perspective</span>
                 </h1>
-                <a href="#" className="btn btn--white">Discover our tours</a>
+                <Button href="#" white animated>Discover our tours</Button>
             </div>
-
         </header>
     )
 }
