@@ -1,5 +1,6 @@
 /* _typography.scss */
 @use '../abstracts/animations' as *;
+@use '../abstracts/variables' as *;
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 body {
@@ -40,4 +41,27 @@ body {
         animation: moveInRight 1s ease-in-out; 
 
     }
+    
+  }
+
+  .heading-secondary{
+    background-image: linear-gradient(to right,  $color-light-orange, $color-vibrant-orange);
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    display: inline-block;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all .2s ease-in-out;
+
+    &:hover{
+      transform: skewy(2deg) skewX(15deg) scale(1.1);
+      text-shadow: .5rem 1rem 2rem rgba(0, 0, 0, 0.24)
+    }
+  }
+
+  .heading-tertiary{
+    margin: 2rem 0;
   }
