@@ -5,25 +5,10 @@
     &,
     &:link,
     &:visited{
-        color: $color-dark-charcoal;
         font-size: 1.6rem;
-        text-transform: uppercase;
-        border-radius: 10rem;
         transition: all .2s;
         display: inline-block;
-        padding: 2.2rem 4rem;
-        position: relative;
-    }
-
-    &:hover{
-        transform: translateY(-.3rem);
-        box-shadow: 0 1rem 1rem rgba(black, .3);
-
-        &::after{
-            transform: scaleX(1.4) scaleY(1.6);
-            opacity: 0;
-        }
-
+        cursor: pointer;
     }
 
     &:active, &:focus{
@@ -31,31 +16,64 @@
         box-shadow: 0 .5rem 1rem rgba(black, .3);
     }
 
-    &::after{
-        content: '';
-        display: inline-block;
-        height: 100%;
-        width: 100%;
-        position:absolute;
-        border-radius: 10rem;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        transition: all .2s;
-        
-    }
-
     &--white{
+        text-transform: uppercase;
         background-color: $color-off-white;
+        border-radius: 10rem;
+        color: $color-dark-charcoal;
+        position: relative;
+        padding: 2.2rem 4rem;
+
 
         &::after{
             background-color: $color-off-white;
         }
+
+        &:hover{
+            transform: translateY(-.3rem);
+            box-shadow: 0 1rem 1rem rgba(black, .3);
+    
+            &::after{
+                transform: scaleX(1.4) scaleY(1.6);
+                opacity: 0;
+            }
+    
+        }
+
+        &::after{
+            content: '';
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            position:absolute;
+            border-radius: 10rem;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: all .2s;
+            
+        }
     }
+
+    &--orange{
+        color: $color-vibrant-orange;
+        font-size: 1.6rem;
+        padding: .7rem;
+        border-bottom: solid 1px;
+
+        &:hover{
+            transform: translateY(-.5rem);
+            background-color: $color-vibrant-orange;
+            border-bottom: 0;
+            color: $color-off-white;
+
+            box-shadow: .3rem 0.5rem 2rem rgba(0, 0, 0, 0.2);
+        }
+    }
+
 
     &--animated{
         animation: moveInBottom 1s ease-in-out;
         animation-fill-mode: forwards;
-    }
-    
+    } 
 }

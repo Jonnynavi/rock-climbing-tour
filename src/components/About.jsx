@@ -1,9 +1,11 @@
 import Heading from "./Heading";
+import AnimatedCanvas from "./AnimatedCanvas";
+import Button from "./Button";
 
 function About(){
     return(
         <section className="section-about">
-            <div className="u-margin-bottom-big">
+            <div className="u-margin-bottom-big u-center-text">
                 <Heading>Exciting tours for all skill Levels</Heading>
             </div>
             <div className="section-about__content">
@@ -17,9 +19,10 @@ function About(){
                     <p className="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                         Praesentium doloremque cupiditate ratione porro tempore explicabo.
                     </p>
+                    <Button orange>Learn more &rarr;</Button>
                 </div>
                 <div className="section-about__right">
-
+                    <AnimatedCanvas />
                 </div>
             </div>
         </section>

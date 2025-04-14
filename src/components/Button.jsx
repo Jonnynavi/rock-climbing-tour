@@ -1,9 +1,10 @@
 import classNames from "classnames"
 ;
-function Button({children, white, animated, ...rest}){
+function Button({children, white, animated, orange, ...rest}){
     const btnStyle = classNames({
         'btn--white': white,
-        'btn--animated':animated
+        'btn--animated':animated,
+        'btn--orange': orange
     });
 
     console.log(btnStyle);

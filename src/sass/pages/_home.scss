@@ -12,9 +12,39 @@
 
     &__content{
         display: flex;
+        flex-wrap: wrap;
+        max-width: 110rem;
+        width: 100%;
     }
 
     &__left{
-        width: 50%;
+        width: 50rem;
+        margin: 0 auto;
     }
+
+    &__right{
+        width: 50rem;
+        margin: 0 auto;
+    }
+}
+
+.section-features{
+    background-image: linear-gradient(to right, rgba($color-vibrant-orange, .6), rgba($color-light-orange, .8)), url(./images/features.jpg);
+    background-size: cover;
+    background-position: top;
+    transform: skewY(-4deg);
+    margin-top: -10rem;
+    padding: 20rem 0;
+    display: flex;
+    justify-content: center;
+
+    &__content{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    & > *{
+        transform: skewY(4deg);
+    }
+
 }
