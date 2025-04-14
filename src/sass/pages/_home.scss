@@ -48,3 +48,31 @@
     }
 
 }
+
+.section-tours{
+    padding: 25rem 0;
+    margin-top: -10rem;
+    background-color: $color-chalk-grey;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section-testimonies{
+    padding: 25rem 0;
+    background-color: white;
+}
+
+.section-booking{
+    padding: 25rem 0;
+    background-image: linear-gradient(to right bottom, $color-vibrant-orange, $color-light-orange);
+}
+
+.footer{
+    padding: 10rem 0;
+    background-color: $color-dark-charcoal-3;
+
+    &__logo{
+        width: 13rem;
+    }
+}
