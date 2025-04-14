@@ -19,7 +19,7 @@ function About(){
                     <p className="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                         Praesentium doloremque cupiditate ratione porro tempore explicabo.
                     </p>
-                    <Button orange>Learn more &rarr;</Button>
+                    <Button text>Learn more &rarr;</Button>
                 </div>
                 <div className="section-about__right">
                     <AnimatedCanvas />

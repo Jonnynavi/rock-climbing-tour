@@ -13,7 +13,7 @@ function Features(){
                 <FeatureCard icon="healthy" title="get healthy">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.
                 </FeatureCard>
-                <FeatureCard icon="mountain" title="climb new mountains">
+                <FeatureCard icon="mountain" title="climb mountains">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.
                 </FeatureCard>
             </div>

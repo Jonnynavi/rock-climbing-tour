@@ -29,7 +29,7 @@
 }
 
 .section-features{
-    background-image: linear-gradient(to right, rgba($color-vibrant-orange, .6), rgba($color-light-orange, .8)), url(./images/features.jpg);
+    background-image: linear-gradient(to right, rgba($color-vibrant-orange, .6), rgba($color-light-orange, .8)), url(../images/features.jpg);
     background-size: cover;
     background-position: top;
     transform: skewY(-4deg);
@@ -56,6 +56,10 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+
+    &__content{
+        display: flex;
+    }
 }
 
 .section-testimonies{

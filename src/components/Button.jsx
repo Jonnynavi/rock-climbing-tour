@@ -1,10 +1,10 @@
 import classNames from "classnames"
 ;
-function Button({children, white, animated, orange, ...rest}){
+function Button({children, white, animated, text, ...rest}){
     const btnStyle = classNames({
         'btn--white': white,
         'btn--animated':animated,
-        'btn--orange': orange
+        'btn--text': text
     });
 
     console.log(btnStyle);
@@ -13,4 +13,4 @@ function Button({children, white, animated, orange, ...rest}){
     )
 }
 
-export default Button;
+export default Button; 

@@ -1,10 +1,11 @@
 import Button from  './Button';
+import logo from '../images/Logo.png';
 
 function Header(){
     return(
         <header className="header">
             <div className="header__logo-box">
-                <img src="./images/Logo.png" alt="logo" className="header__logo" />
+                <img src={logo} alt="logo" className="header__logo" />
             </div>
             <div className="header__textbox">
                 <h1 className="heading-primary">

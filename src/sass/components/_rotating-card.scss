@@ -1,0 +1,17 @@
+@use "../abstracts/variables" as *;
+
+.card{
+    width: 40rem;
+    background-color: white;
+    text-align: center;
+
+    ul{
+        display: inline-block;
+        li{
+            
+            &:not(:last-child){
+                border-bottom: 1px solid $color-light-grey-2;
+            }
+        }
+    }
+}
