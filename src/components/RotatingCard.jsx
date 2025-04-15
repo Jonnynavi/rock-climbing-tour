@@ -10,9 +10,8 @@ function RotatingCard({title, details, cardNumber}){
         <div className={`card card--${cardNumber}`}>
             <div className="card__front">
                 <div className="card__background">
-                    <h4 className="card__title">{title}</h4>
-
                 </div>
+                <h4 className="card__title"><span className="card__title--span">{title}</span></h4>
                 <div className="card__details">
                     <ul>
                         {cardDetails()}
