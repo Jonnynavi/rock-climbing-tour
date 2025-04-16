@@ -5,17 +5,22 @@ function RotatingCard({title, details, cardNumber}){
             return <li>{item}</li>
         })
     }
-
+    const cardNum = `card--${cardNumber}`;
     return(
-        <div className={`card card--${cardNumber}`}>
-            <div className="card__front">
-                <div className="card__background">
+        <div className={`card ${cardNum}`}>
+            <div className="card__inner">
+                <div className="card__side card--front">
+                    <div className={`card__background ${cardNum}__background`}>
+                    </div>
+                    <h4 className="card__title"><span className={`card__title--span ${cardNum}__title--span`}>{title}</span></h4>
+                    <div className="card__details">
+                        <ul>
+                            {cardDetails()}
+                        </ul>
+                    </div>
                 </div>
-                <h4 className="card__title"><span className="card__title--span">{title}</span></h4>
-                <div className="card__details">
-                    <ul>
-                        {cardDetails()}
-                    </ul>
+                <div className={`card__side ${cardNum}--back`}>
+                    
                 </div>
             </div>
         </div>

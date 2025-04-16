@@ -1,17 +1,12 @@
 @use "../abstracts/variables" as *;
 
 .card{
-    width: 34rem;
-    margin: 3rem;
-    background-color: white;
-    text-align: center;
-    box-shadow: 0 .5rem 3rem rgba(0, 0, 0, 0.2);
-    position: relative;
+
+    perspective:150rem;
 
     &__background{
         height: 25rem;
         clip-path:polygon(0% 0%, 100% 0%, 100% 87%, 0% 100%);
-        background-image: linear-gradient(to right, rgba($color-vibrant-orange, .9), $color-light-orange), url("../images/card-1.jpg");
         background-size: cover;
         background-blend-mode: screen;
     }
@@ -19,15 +14,36 @@
     &__title{
         position: absolute;
         right: 2rem;
-        top: 16rem;
+        top: 15rem;
         font-size: 3rem;
         font-weight: 300;
         width: 17rem;
+        text-align: end;
+        color: white;
 
         &--span{
-            padding: 2rem;
+            box-decoration-break: clone;
+            display: inline;
+            padding: 1rem;
         }
     }
+
+    &__inner{
+        width: 36rem;
+        height: 56rem;
+        transform-style: preserve-3d;
+        transition: transform 0.8s ease;
+        margin: 3rem;
+        background-color: white;
+        box-shadow: 0 .5rem 3rem rgba(0, 0, 0, 0.2);
+        border-radius: .5rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    
+
 
     ul{
         padding: 2rem;
@@ -36,6 +52,33 @@
             &:not(:last-child){
                 border-bottom: 1px solid $color-light-grey-2;
             }
+        }
+    }
+
+    
+    &--1{
+        &__background{
+            background-image: linear-gradient(to right, rgba($color-vibrant-orange, .9), $color-light-orange), url("../images/card-1.jpg");
+        }
+        &__title--span{
+            background-image: linear-gradient(45deg, rgba($color-light-orange, .5), rgba($color-vibrant-orange, .3));
+        }
+    }
+    &--2{
+        &__background{
+            background-image: linear-gradient(to right, rgba($color-light-green, .9), $color-dark-green), url("../images/card-2.jpg");
+        }
+        &__title--span{
+            background-image: linear-gradient(45deg, rgba($color-light-green, .5), rgba($color-dark-green, .3));
+        }
+    }
+    &--3{
+        &__background{
+            background-image: linear-gradient(to right, rgba($color-dark-blue, .9), $color-light-blue), url("../images/card-3.jpg");
+            background-position: center;
+        }
+        &__title--span{
+            background-image: linear-gradient(45deg, rgba($color-light-blue, .5), rgba($color-dark-blue, .3));
         }
     }
 }

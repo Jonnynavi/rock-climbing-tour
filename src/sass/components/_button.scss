@@ -15,19 +15,11 @@
         transform: translateY(-.1rem);
         box-shadow: 0 .5rem 1rem rgba(black, .3);
     }
-
-    &--white{
+    &__round{
         text-transform: uppercase;
-        background-color: $color-off-white;
-        border-radius: 10rem;
-        color: $color-dark-charcoal;
         position: relative;
+        border-radius: 10rem;
         padding: 2.2rem 4rem;
-
-
-        &::after{
-            background-color: $color-off-white;
-        }
 
         &:hover{
             transform: translateY(-.3rem);
@@ -39,7 +31,7 @@
             }
     
         }
-
+        
         &::after{
             content: '';
             display: inline-block;
@@ -51,10 +43,31 @@
             left: 0;
             z-index: -1;
             transition: all .2s;
+
             
         }
-    }
+        &--white{           
+            background-color: $color-off-white;
+            color: $color-dark-charcoal;
 
+            &::after{
+                background-color: $color-off-white;
+            }         
+        }
+
+        &--orange{
+            background-color: $color-vibrant-orange;
+            color: white;
+
+            &::after{
+                background-color: $color-vibrant-orange;
+            } 
+        }
+    
+    }
+   
+
+ 
     &--text{
         color: $color-vibrant-orange;
         font-size: 1.6rem;

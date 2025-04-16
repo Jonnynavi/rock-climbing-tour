@@ -1,0 +1,77 @@
+@use "../abstracts/variables" as *;
+
+.testimony{
+    max-width: 98rem;
+    width: 100%;
+    padding: 6rem;
+    background: #f8f8f8b8;
+    transform: skewX(-14deg);
+    color: $color-dark-charcoal-2;
+    margin: 4rem 0;
+    
+    
+
+    &__content{
+        transform: skewX(14deg);
+
+
+    }
+
+    &__figure{
+        height:17rem;
+        width: 17rem;
+        float: left;
+        text-align: center;
+        overflow: hidden;
+        border-radius: 18rem;
+        margin: 1rem;
+        shape-outside: circle(50% at 50% 50%);
+        position: relative;
+
+    }
+
+    &__caption{
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        opacity: 0;
+        font-size: 2rem;
+        text-transform: capitalize;
+        transform: translate(-50%, -50%);
+        color: white;
+        transition: all .3s;
+
+
+    }
+
+    &__img{
+        position: absolute;
+        left: 0;
+        width: 110%;
+        transition: all .3s;
+    }
+
+    &__heading{
+        margin-bottom: 1rem;
+        padding-top: 1rem;
+        text-transform: uppercase;
+    }
+
+    &__paragraph{
+        line-height: 3.2rem;
+    }
+
+    &:hover{
+        .testimony{
+            &__caption{
+                top: 50%;
+                opacity: 1;
+            }
+            &__img{
+                filter: blur(.5px) brightness(0.89);
+                width: 100%;
+            }
+        }
+        
+    }
+}
