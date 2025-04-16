@@ -1,8 +1,14 @@
 html{
     font-size: 62.5%;
+    @media(max-width: 45rem){
+      font-size: 30%;
+    }
 }
 body{
     padding: 3rem;
+    @media(max-width: 40rem){
+      padding: 0;
+    }
 }
 button {
   cursor: pointer;

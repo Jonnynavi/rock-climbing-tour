@@ -1,8 +1,9 @@
 @use "../abstracts/variables" as *;
 
 .testimony{
+
     max-width: 98rem;
-    width: 100%;
+    width: 80%;
     padding: 6rem;
     background: #f8f8f8b8;
     transform: skewX(-14deg);
@@ -74,5 +75,28 @@
             }
         }
         
+    }
+
+    
+    @media (max-width: 1080px) {
+        transform: skewX(0);
+        
+        &__content{
+            transform: skewX(0);
+        }
+
+    }
+
+    @media (max-width: 640px) {
+
+        &__content{
+            text-align: center;
+        }
+        
+        &__figure{
+            float: none;
+            margin: auto;
+        }
+
     }
 }

@@ -26,6 +26,13 @@
         width: 50rem;
         margin: 0 auto;
     }
+
+    @media (max-width: 1060px) {
+        &__right{
+            display: none;
+        }
+
+    }
 }
 
 .section-features{

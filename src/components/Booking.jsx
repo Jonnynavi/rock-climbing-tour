@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Heading from "./Heading";
+import Button from "./Button";
 
 
 function Booking(){
@@ -8,11 +9,19 @@ function Booking(){
     const [smallGroup, setSmallGroup] = useState(false);
     const [largeGroup, setLargeGroup] = useState(false);
 
-    const handleRadioClick = () =>{
-
+    const handleLargeGroup = () =>{
+        setSmallGroup(false);
+        setLargeGroup(true);
+        
     }
 
-    
+    const handleSmallGroup = () =>{
+        setLargeGroup(false);
+        setSmallGroup(true);
+        
+    }
+
+
     return(
         <section className="section-booking">
             <div className="booking">
@@ -28,20 +37,22 @@ function Booking(){
                     </div>
                     <div className="form__group">
                         <div className="form__radio-group">
-                            <input type="radio" id="small" className="form__radio-input"  checked={smallGroup} name="size"></input>
+                            <input type="radio" id="small" className="form__radio-input" onClick={handleSmallGroup} checked={smallGroup} name="size"></input>
                             <label for="small" className="form__radio-label">
-                                <span className="form__radio-button"></span>
+                                <span className={`form__radio-button ${smallGroup ? "form__radio-button--fill" : "" }`}></span>
                                 Small Group Tour
                             </label>
                         </div>
                         <div className="form__radio-group">
-                            <input type="radio" id="large" className="form__radio-input" onClick={() => setLargeGroup(true)} checked={largeGroup} name="size"></input>
+                            <input type="radio" id="large" className="form__radio-input" onClick={handleLargeGroup} checked={largeGroup} name="size"></input>
                             <label for="large" className="form__radio-label">
-                                <span className="form__radio-button"></span>
+                                <span className={`form__radio-button ${largeGroup ? "form__radio-button--fill" : "" }`}></span>
                                 Large Group Tour
                             </label>
                         </div>
                     </div>
+
+                    <Button orange>Next Step →</Button>
                 </form>
             </div>
         </section>

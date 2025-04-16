@@ -1,0 +1,30 @@
+.footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+
+    &__links{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+
+        &--left{
+            display: flex;
+            border-top: 1px solid white;
+            text-transform: uppercase;
+            
+            li{
+                padding: 1rem
+            }
+        }
+
+        &--right{
+            border-top: 1px solid white;
+            padding-top: 1.5px;
+        }
+
+
+    }
+}
