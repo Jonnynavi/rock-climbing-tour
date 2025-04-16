@@ -76,6 +76,8 @@
 .section-booking{
     padding: 25rem 0;
     background-image: linear-gradient(to right bottom, $color-vibrant-orange, $color-light-orange);
+    display: flex;
+    justify-content: center;
 }
 
 .footer{

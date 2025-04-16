@@ -8,6 +8,7 @@
     transform: skewX(-14deg);
     color: $color-dark-charcoal-2;
     margin: 4rem 0;
+    box-shadow: 0 .2rem 2rem #00000033;
     
     
 
@@ -68,7 +69,7 @@
                 opacity: 1;
             }
             &__img{
-                filter: blur(.5px) brightness(0.89);
+                filter: blur(.5px) brightness(0.5);
                 width: 100%;
             }
         }

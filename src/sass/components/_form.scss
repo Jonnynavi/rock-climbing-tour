@@ -1,0 +1,50 @@
+.booking{
+    display: inline-block;
+    background: white;
+    width: 126rem;
+    padding: 7rem;
+    height: 54rem;
+    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%,rgba(255, 255, 255, 0.9) 50%, transparent 50%), url("/src/images/form-background.jpg");
+    background-size: cover;
+}
+
+.form{
+    width: 50%;
+    height: 96%;
+    &__input{
+        border: none;
+        box-shadow: 0 1rem 1rem rgba(black, .2);
+        width: 80%;
+        height: 5rem;
+        display: block;
+        font-size: 1.6rem;
+        color: #4c4c4c;
+        padding: 1rem;
+
+        &:focus-visible{
+            outline: none;
+            padding: .8rem;
+        }
+    }
+    &__form{
+        width: 46%;
+        height: 96%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__label{
+        font-size: 1.6rem;
+        width: 80%;
+        height: 5rem;
+        display: block;
+        padding: 1rem;
+    
+    }
+    &__group{
+        margin-bottom: 4rem;
+    }
+    &__radio-group{
+        width: 48%;
+        display: inline-block;
+    }
+}
